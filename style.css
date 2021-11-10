@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'orangekid';
+    src:  url('./orangekid.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'lunchds';
+    src:  url('./lunchds.ttf') format('truetype');
+}
+body {
+    background-image: url("img/headerfuckingmanypixels.png");
+    background-position: top center;
+    font-family: orangekid;
+    font-size: 48px;
+    color: #fcfefe;
+}
+
+.header{
+    color: #4b596f;
+    font-family: lunchds;
+    font-size: 52px;
+    display: flex;
+    justify-content: space-around;
+    height: 130px;
+}
+
+.content{
+    width: 800px;
+    max-width: 95%;
+    margin: auto;
+    text-align: center;
+    text-shadow: 2px 2px #18191f;
+}
+.bingo-text{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-family: lunchds;
+    font-size: 52px;
+    display: flex;
+    justify-content: space-around;
+}
+input{
+    font-family: orangekid;
+    font-size: 48px;
+}
+.button{
+    display: inline-block;
+    margin: 20px;
+    padding: 20px 50px 30px 50px;
+    border: 5px solid #6b4c52;
+    border-radius: 15px;
+    background-color: #da9f8a;
+    user-select: none;
+    cursor: pointer;
+}
+
+.disabled{
+    border: 5px solid #44323a;
+    background-color: #9d6e68;
+    color: #6b4c52;
+    cursor: auto;
+}
+
+.cookiepolicy{
+    font-size: 20px;
+}
+
+.board{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+}
+.board-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.board-cell{
+    background-color: rgba(24, 25, 31, 0.7);
+    position: relative;
+    width: 20%;
+    margin: 5px;
+}
+.unlocked{
+    background-color: rgba(218, 159, 138, 0.69);
+}
+
+.board-cell:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.cell{
+  position: absolute;
+    display: flex;
+    align-items: center;
+  width: 98%;
+  height: 98%;
+    margin: 1%;
+    user-select: none;
+    cursor: pointer;
+}
+.cell div{
+    width: 100%;
+    font-size: 25px;
+    line-height: 24px;
+}
+@media only screen and (max-width: 700px) {
+
+    .cell div {
+        font-size: 22px;
+        line-height: 21px;
+    }
+}
+@media only screen and (max-width: 600px) {
+
+    .cell div {
+        font-size: 18px;
+        line-height: 17px;
+    }
+}
+@media only screen and (max-width: 500px) {
+
+    .cell div {
+        font-size: 15px;
+        line-height: 14px;
+    }
+}
+@media only screen and (max-width: 400px) {
+
+    .cell div {
+        font-size: 12px;
+        line-height: 11px;
+    }
+}

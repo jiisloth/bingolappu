@@ -11,7 +11,7 @@ $(document).ready(function(){
     $("#go").on( "click", function() {
         if (username){
             localStorage.setItem('username', username);
-            window.location.href = "play.html";
+            window.location.href = "speed/play.html";
         }
     });
 });

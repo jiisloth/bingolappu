@@ -1,26 +1,31 @@
 @font-face {
-    font-family: 'orangekid';
-    src:  url('./orangekid.ttf') format('truetype');
+    font-family: 'misterpixel';
+    src:  url('./MisterPixelRegular.otf') format('truetype');
 }
 @font-face {
-    font-family: 'lunchds';
-    src:  url('./lunchds.ttf') format('truetype');
+    font-family: 'alagard';
+    src:  url('./Alagardplus.ttf') format('truetype');
 }
 body {
-    background-image: url("img/headerfuckingmanypixels.png");
+    background-image: url("img/bg.png");
     background-position: top center;
-    font-family: orangekid;
+    font-family: misterpixel;
     font-size: 48px;
-    color: #fcfefe;
+    color: #c3e8f0;
+    padding: 0;
+    margin: 0;
 }
 
 .header{
-    color: #4b596f;
-    font-family: lunchds;
-    font-size: 52px;
-    display: flex;
+    text-align: center;
     justify-content: space-around;
-    height: 130px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.header > img{
+    margin-left: -50px;
+    margin-right: -50px;
 }
 
 .content{
@@ -33,30 +38,30 @@ body {
 .bingo-text{
     margin-top: 100px;
     margin-bottom: 50px;
-    font-family: lunchds;
+    font-family: alagard;
     font-size: 52px;
     display: flex;
     justify-content: space-around;
 }
 input{
-    font-family: orangekid;
+    font-family: misterpixel;
     font-size: 48px;
 }
 .button{
     display: inline-block;
     margin: 20px;
     padding: 20px 50px 30px 50px;
-    border: 5px solid #6b4c52;
+    border: 5px solid #145750;
     border-radius: 15px;
-    background-color: #da9f8a;
+    background-color: #219580;
     user-select: none;
     cursor: pointer;
 }
 
 .disabled{
-    border: 5px solid #44323a;
-    background-color: #9d6e68;
-    color: #6b4c52;
+    border: 5px solid #682658;
+    background-color: #c93b74;
+    color: #682658;
     cursor: auto;
 }
 
@@ -77,13 +82,13 @@ input{
     justify-content: space-around;
 }
 .board-cell{
-    background-color: rgba(24, 25, 31, 0.7);
+    background-color: rgba(3, 9, 39, 0.7);
     position: relative;
     width: 20%;
     margin: 5px;
 }
 .unlocked{
-    background-color: rgba(218, 159, 138, 0.69);
+    background-color: rgba(99, 199, 181, 0.7);
 }
 
 .board-cell:after {
@@ -103,7 +108,7 @@ input{
 }
 .cell div{
     width: 100%;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 24px;
 }
 @media only screen and (max-width: 700px) {

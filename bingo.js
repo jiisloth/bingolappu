@@ -132,7 +132,7 @@ var choises = [
     "Kyseenalainen dialogi",
     "Pelaaja haukottelee norppaSleeper"
 ]
-
+// Damage boost
 var seed = 6186;
 function random() {
     var x = Math.sin(seed++) * 10000;

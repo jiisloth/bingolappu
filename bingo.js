@@ -133,7 +133,7 @@ var choises = [
     "Pelaaja haukottelee norppaSleeper"
 ]
 // Damage boost
-var seed = 6186;
+var seed = 3186;
 function random() {
     var x = Math.sin(seed++) * 10000;
     return x - Math.floor(x);

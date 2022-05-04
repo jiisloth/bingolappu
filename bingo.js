@@ -109,7 +109,7 @@ var choises = [
     "Vauhtisbiisi",
     "Näe resetti",
     "Joku syö striimissä",
-    "Uusi maailmanennätys!",
+    "Uusi maailman- ennätys!",
     "Hauska lahjoitusviesti",
     "NorppaJAM-moment",
     "Kootut selitykset pelaajalta",

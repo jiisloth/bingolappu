@@ -68,72 +68,10 @@ let unlocks = [
     [false, false, false, false, false],
     [false, false, false, false, false]
 ]
+const numbers = 75
 
-
-
-var choises = [
-    "Lahjoita MIELI ry:lle!",
-    "Chatti bäckseattaa",
-    "Yhdessä yläviistoon",
-    "Ninjailua",
-    "Katso runi lapsuudensuosikista",
-    "Karaokea pelissä",
-    "Pelaa Minigolfia",
-    "Uusi Oma Ennätys",
-    "Toistuva voiceline pelissä",
-    "Yleisö vilkuttaa kameralle",
-    "Koe out of bounds -elämys",
-    "Postaa Vauhtis- tunnelmakuva someen",
-    "Katso kokonainen runi",
-    "Todista glitchi",
-    "Chattaile 03:00 - 06:00",
-    "Bongaa Vauhtijuoksu-paita",
-    "Ketsuppi lentää",
-    "Iso osa pelistä skipataan",
-    "Vessatauko pitkässä runissa",
-    "Mäntä litistää pelaajan",
-    "Teknisiä ongelmia",
-    "Omituinen ohjain käytössä",
-    "F",
-    "It's a me Mario!",
-    "Katso mainostauko",
-    "Opi uutta tutusta pelistä",
-    "Pulssi Highscore!",
-    "Cosplay",
-    "Kaksi pelaajaa yhteistyössä",
-    "Erittäin hyvä RNG",
-    "Erittäin huono RNG",
-    "Yli 100e lahjoitus!",
-    "Unskippable cutscene",
-    "Pelaajat kisaavat keskenään",
-    "Vauhtisbiisi",
-    "Näe resetti",
-    "Joku syö striimissä",
-    "Uusi maailman- ennätys!",
-    "Hauska lahjoitusviesti",
-    "NorppaJAM-moment",
-    "Kootut selitykset pelaajalta",
-    "Äitille terkkuja",
-    "Blink and you miss it",
-    "\"Ekalla!\"",
-    "\"WOAH!\" (Crash Bandicoot)",
-    "Moogle ruudulla",
-    "Bongaa Disney-hahmo",
-    "Joku ei osaa käyttää kannustimia",
-    "Framen tarkka temppu",
-    "\"Oho\"",
-    "Täytä palautekysely",
-    "En ymmärrä tätä kieltä",
-    "Peli menee rikki",
-    "*Nappien hakkaamista*",
-    "Puhetta aamupalasta",
-    "Bongaa Aku Aku",
-    "Terveiset kotopuolesta",
-    "Kyseenalainen dialogi",
-    "Joku haukottelee"
-]
 // Damage boost
-var seed = 3186;
+var seed = 1286;
 function random() {
     var x = Math.sin(seed++) * 10000;
     return x - Math.floor(x);
@@ -160,6 +98,18 @@ function set_nametext(s){
 
 function generate(){
     let html = ""
+    let choises = []
+    let num = 0
+    for (let i = 0; i < 5; i ++) {
+        let pool = []
+        for (let j = 0; j < numbers/5; j ++) {
+            num += 1
+            pool.push(num)
+        }
+        choises.push(pool)
+    }
+    console.log(choises)
+
     for (var row = 0; row < 5; row ++){
         html += "<div class='board-row'>"
         for (var cell = 0; cell < 5; cell ++) {
@@ -172,11 +122,11 @@ function generate(){
             while (rnum === 1) {
                 rnum = random()
             }
-            rnum = Math.floor(choises.length * rnum)
-            let cell_text = choises[rnum]
-            choises.splice(rnum, 1)
+            rnum = Math.floor( choises[cell].length * rnum)
+            let cell_text = choises[cell][rnum]
+            choises[cell].splice(rnum, 1)
             if (row === 2 && cell === 2){
-                cell_text = '"Tätä ei oo koskaan tapahtunu aikasemmin"'
+                cell_text = 'FREE'
             }
             html += cell_text
             html += "</div></div></div>"
